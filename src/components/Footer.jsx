@@ -21,7 +21,7 @@ const Footer = () => {
       <span className="ml-1  text-1 text-gray-50">GMVAULT</span>
           </div>
     </a>
-    <p className="text-sm text-gray-500 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4">© 2024 Ratnesh_jatavhan 
+    <p className="text-sm text-gray-500 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4">© 2024 Ratnesh_jatav 
       <a className="text-gray-600 ml-1" rel="noopener noreferrer" target="_blank" previewlistener="true"></a>
     </p>
     <span className="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">

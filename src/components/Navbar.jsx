@@ -19,14 +19,14 @@ const Navbar = () => {
 
         </div>
         </div>
-      {/* <ul>
-        <li className='flex gap-4'>
+      { <ul>
+        <li className='flex gap-10 justify-between '>
             <a className='hover:font-bold' href="/">Home</a>
             <a className='hover:font-bold' href="">About</a>
             <a className='hover:font-bold' href="#">Contect us</a>
             <a className='hover:font-bold' href="">Servise</a>
         </li>
-      </ul> */}
+      </ul> }
       <button className='text-white bg-green-500 my-5 rounded-full flex justify-between items-center ring-white ring-1'>
         <img className='invert w-10 p-1' src="/icons/github.svg" alt="github logo" />
         <a href="https://github.com/Ratnesh-Jatav" target='_blank'>
