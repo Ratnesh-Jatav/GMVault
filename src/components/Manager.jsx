@@ -87,13 +87,13 @@ const Manager = ({ user }) => {
           <span className='text-green-700'>Vault&gt;</span>
         </h1>
         <p className='text-green-900 text-lg text-center'>Your own Password Manager</p>
-        <div className="flex flex-col p-4 text-black gap-8 items-center">
-          <input value={form.site} onChange={handleChange} placeholder='Enter website URL' className="rounded-full border-green-500 w-full p-4 py-1" type="text" name='site' id='site' />
-          <div className="flex flex-col md:flex-row w-full justify-between gap-8 items-center">
-            <input value={form.username} onChange={handleChange} placeholder='Enter username' className="rounded-full border-green-900 w-full p-4 py-1" type="text" name='username' id='username' />
+        <div className="flex flex-col p-4 text-black gap-10 items-center">
+          <input value={form.site} onChange={handleChange} placeholder='Enter website URL' className="rounded-full border-green-500 w-full p-4 py-2" type="text" name='site' id='site' />
+          <div className="flex flex-col md:flex-row w-xl justify-between gap-10 items-center">
+            <input value={form.username} onChange={handleChange} placeholder='Enter username' className="rounded-full border-green-900 w-xl p-4 py-2" type="text" name='username' id='username' />
             <div className='relative'>
-              <input ref={passwordRef} value={form.password} onChange={handleChange} placeholder='Enter Your Password' className="rounded-full border-green-900  p-4 py-1" type="password" name='password' id='pssword' />
-              <span className='absolute right-[3px] top-[4px] cursor-pointer' onClick={showPassword}>
+              <input ref={passwordRef} value={form.password} onChange={handleChange} placeholder='Enter Your Password' className="rounded-full border-green-900  p-4 py-2" type="password" name='password' id='pssword' />
+              <span className='absolute right-[6px] top-[6px] cursor-pointer' onClick={showPassword}>
                 <img ref={ref} className='p-1' width={26} src="icons/eye.png" alt="eye" />
               </span>
             </div>
@@ -102,6 +102,7 @@ const Manager = ({ user }) => {
             <lord-icon src="https://cdn.lordicon.com/navborva.json" trigger="hover"></lord-icon>
             Save
           </button>
+          
         </div>
         <div className='passwords'>
           <h2 className='font-bold text-xl py-4 text-lime-50'>Your Passwords</h2>
@@ -109,9 +110,9 @@ const Manager = ({ user }) => {
           {passwordArray.length !== 0 && <table className="table-auto w-full rounded-md overflow-hidden">
             <thead className='bg-green-900 text-white'>
               <tr>
-                <th className='py-2'>site</th>
-                <th className='py-2'>username</th>
-                <th className='py-2'>password</th>
+                <th className='py-2'>Site</th>
+                <th className='py-2'>Username</th>
+                <th className='py-2'>Password</th>
                 <th className='py-2'>Actions</th>
               </tr>
             </thead>
