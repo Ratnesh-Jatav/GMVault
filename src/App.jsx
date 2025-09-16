@@ -13,13 +13,17 @@ import Services from './pages/Services';
 function App() {
   const [user, setUser] = useState(null)
 
+  const handleLogout = () => {
+    setUser(null);
+  };
+
   if (!user) {
     return <Login onLogin={setUser} />
   }
 
   return (
     <Router>
-      <Navbar />
+      <Navbar onLogout={handleLogout} />
       <div className='bg-[#000000] bg-[radial-gradient(#ffffff33_1px,#00091d_1px)] bg-[size:20px_20px] min-h-screen'>
         <Routes>
           <Route path="/" element={<><Home /><Manager user={user} /></>} />

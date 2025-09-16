@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
 
-const Navbar = () => {
+const Navbar = ({ onLogout }) => {
   return (
     <nav className='bg-slate-800 text-white'>
       <div className='mycontainer flex justify-between items-center py-12 px-4 h-20'>
@@ -23,12 +23,21 @@ const Navbar = () => {
             <Link className='hover:font-bold' to="/services">Services</Link>
           </li>
         </ul>
-        <button className='text-white bg-green-500 my-5 rounded-full flex justify-between items-center ring-white ring-1'>
-          <img className='invert w-10 p-1' src="/icons/github.svg" alt="github logo" />
-          <a href="https://github.com/Ratnesh-Jatav" target='_blank' rel="noopener noreferrer">
-            <span className='font-bold px-2'>GitHub</span>
-          </a>
-        </button>
+        <div className="flex gap-2 items-center">
+          <button className='text-white bg-green-500 my-5 rounded-full flex justify-between items-center ring-white ring-1'>
+            <img className='invert w-10 p-1' src="/icons/github.svg" alt="github logo" />
+            <a href="https://github.com/Ratnesh-Jatav" target='_blank' rel="noopener noreferrer">
+              <span className='font-bold px-2'>GitHub</span>
+            </a>
+          </button>
+          <button
+            className="text-white bg-red-500 my-5 rounded-full flex items-center px-4 py-2 font-bold hover:bg-red-600 transition-colors"
+            onClick={onLogout}
+          >
+            
+            LogOut
+          </button>
+        </div>
       </div>
     </nav>
   )

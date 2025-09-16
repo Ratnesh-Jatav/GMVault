@@ -8,25 +8,29 @@ const Login = ({ onLogin }) => {
     const [error, setError] = useState('');
     const [showRegister, setShowRegister] = useState(false);
     const [registerMsg, setRegisterMsg] = useState('');
+    const [loading, setLoading] = useState(false);
 
     const handleSubmit = async (e) => {
         e.preventDefault();
         setError('');
+        setLoading(true);
         try {
             const res = await fetch(`${API_URL}/api/login`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ username, password })
             });
+            const data = await res.json();
             if (!res.ok) {
-                const data = await res.json();
                 setError(data.message || 'Login failed');
+                setLoading(false);
                 return;
             }
-            const data = await res.json();
             if (onLogin) onLogin(data.username);
         } catch (err) {
             setError('Network error');
+        } finally {
+            setLoading(false);
         }
     };
 
@@ -34,6 +38,7 @@ const Login = ({ onLogin }) => {
         e.preventDefault();
         setRegisterMsg('');
         setError('');
+        setLoading(true);
         try {
             const res = await fetch(`${API_URL}/api/register`, {
                 method: 'POST',
@@ -43,12 +48,15 @@ const Login = ({ onLogin }) => {
             const data = await res.json();
             if (!res.ok) {
                 setError(data.message || 'Registration failed');
+                setLoading(false);
                 return;
             }
             setRegisterMsg('Account created! You can now log in.');
             setShowRegister(false);
         } catch (err) {
             setError('Network error');
+        } finally {
+            setLoading(false);
         }
     };
     
@@ -86,6 +94,7 @@ const Login = ({ onLogin }) => {
                         value={username}
                         onChange={e => setUsername(e.target.value)}
                         autoComplete="username"
+                        disabled={loading}
                     />
                 </div>
                 <div className="mb-6">
@@ -97,16 +106,26 @@ const Login = ({ onLogin }) => {
                         value={password}
                         onChange={e => setPassword(e.target.value)}
                         autoComplete="current-password"
+                        disabled={loading}
                     />
                 </div>
                 
                 <button
                     type="submit"
-                    className="w-full bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded transition-colors mb-2"
+                    className="w-full bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded transition-colors mb-2 flex items-center justify-center"
+                    disabled={loading}
                 >
-                    {showRegister ? 'Create Account' : 'Login'}
+                    {loading ? (
+                        <>
+                            <svg className="animate-spin h-5 w-5 mr-2 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                                <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                                <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8z"></path>
+                            </svg>
+                            Loading...
+                        </>
+                    ) : showRegister ? 'Create Account' : 'Login'}
                 </button>
-                 <div className="p-8 text-center">
+                <div className="p-8 text-center">
                             <p className="text-lg">Your secure password manager. Store, manage, and protect your passwords with ease.</p>
                         </div>
                 <div className="text-center">
