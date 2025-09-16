@@ -51,11 +51,16 @@ const Login = ({ onLogin }) => {
             setError('Network error');
         }
     };
+    
 
     return (
-        <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 to-slate-700">
+        <div className="min-h-screen flex items-center justify-center relative overflow-hidden">
+            <div className="absolute inset-0 -z-10 h-full w-full items-center px-5 py-24 [background:radial-gradient(125%_125%_at_50%_10%,#000_40%,#63e_100%)]"></div>
+            
             <form onSubmit={showRegister ? handleRegister : handleSubmit} className="bg-white p-8 rounded-lg shadow-lg w-full max-w-sm">
+                
                 <h2 className="text-2xl font-bold mb-6 text-center text-slate-800">{showRegister ? 'Create Account' : <div className='div1'>
+            <span><h1 className="text-2xl font-bold mb-6">Welcome To GMVault</h1></span> 
 
                     <div className=" font-bold text-2xl flex w-full pl-11 ">
                         <img className='ml-20 h-20 border-2	border-x-lime-500 rounded-full' src="/icons/Logo.jpg" alt="Plase Connect With the " />
@@ -66,6 +71,7 @@ const Login = ({ onLogin }) => {
                         <span className='text-green-700 ml-18 pl-4 '>&lt;</span>
                         <span>GM</span>
                         <span className='text-green-700'>VAULT&gt;</span>
+                       
 
                     </div>
                 </div>}</h2>
@@ -93,12 +99,16 @@ const Login = ({ onLogin }) => {
                         autoComplete="current-password"
                     />
                 </div>
+                
                 <button
                     type="submit"
                     className="w-full bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded transition-colors mb-2"
                 >
                     {showRegister ? 'Create Account' : 'Login'}
                 </button>
+                 <div className="p-8 text-center">
+                            <p className="text-lg">Your secure password manager. Store, manage, and protect your passwords with ease.</p>
+                        </div>
                 <div className="text-center">
                     {showRegister ? (
                         <span className="text-sm">Already have an account?{' '}
