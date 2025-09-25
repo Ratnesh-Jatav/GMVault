@@ -19,8 +19,8 @@ const Navbar = ({ onLogout }) => {
           <li className='flex gap-10 justify-between'>
             <Link className='hover:font-bold' to="/">Home</Link>
             <Link className='hover:font-bold' to="/about">About</Link>
-            <Link className='hover:font-bold' to="/contact">Contact Us</Link>
             <Link className='hover:font-bold' to="/services">Services</Link>
+            <Link className='hover:font-bold' to="/contact">Contact Us</Link>
           </li>
         </ul>
         <div className="flex gap-2 items-center">
@@ -31,10 +31,10 @@ const Navbar = ({ onLogout }) => {
             </a>
           </button>
           <button
-            className="text-white bg-red-500 my-5 rounded-full flex items-center px-4 py-2 font-bold hover:bg-red-600 transition-colors"
+            className="text-white bg-red-500 my-5 rounded-full flex items-center px-5 py-2 font-bold ring-white ring-1 hover:bg-red-600 transition-colors"
             onClick={onLogout}
           >
-            
+            <lord-icon style={{ width: '28px', height: '28px', paddingTop: '0px', paddingLeft: '0px' }} src="https://cdn.lordicon.com/vfiwitrm.json" trigger="hover"></lord-icon>
             LogOut
           </button>
         </div>
