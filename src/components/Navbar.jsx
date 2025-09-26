@@ -24,13 +24,7 @@ const Navbar = ({ onLogout }) => {
           </li>
         </ul>
         <div className="flex gap-2 items-center">
-          <button className='text-white bg-green-500 my-5 rounded-full flex justify-between items-center ring-white ring-1'>
-            <img className='invert w-10 p-1' src="/icons/github.svg" alt="github logo" />
-            <a href="https://github.com/Ratnesh-Jatav" target='_blank' rel="noopener noreferrer">
-              <span className='font-bold px-2'>GitHub</span>
-            </a>
-          </button>
-          <button
+                   <button
             className="text-white bg-red-500 my-5 rounded-full flex items-center px-5 py-2 font-bold ring-white ring-1 hover:bg-red-600 transition-colors"
             onClick={onLogout}
           >
@@ -42,5 +36,7 @@ const Navbar = ({ onLogout }) => {
     </nav>
   )
 }
+
+
 
 export default Navbar
