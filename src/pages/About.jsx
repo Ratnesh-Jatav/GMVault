@@ -8,18 +8,18 @@ const About = () => {
     <div className="min-h-screen bg-,gray-50 px-6 py-16 ">
       {/*  Intro */}
       <div className="max-w-3xl mx-auto text-center mb-16 ">
-        <h1 className="text-4xl font-bold text-blue-700 mb-4">About GMVault</h1>
-        <p className="text-lg text-gray-700 leading-relaxed">
+        <h1 className="text-4xl font-bold text-blue-300 mb-4">About GMVault</h1>
+        <p className="text-lg text-green-200 leading-relaxed">
           GMVault (Guard My Vault) is a modern password manager built to make your
           digital life secure, simple, and accessible anytime, anywhere.
         </p>
       </div>
 
-      {/*  Section 1 */}
-      <div className="grid md:grid-cols-2 gap-10 items-center max-w-6xl mx-auto mb-20">
+      {/*  Section 1 Security */}
+      <div className="text-white grid md:grid-cols-2 gap-10 items-center max-w-6xl mx-auto mb-20">
         <div>
-          <h2 className="text-2xl font-semibold text-gray-900 mb-4">🔒 Security First</h2>
-          <p className="text-gray-600 leading-relaxed">
+          <h2 className="text-2xl font-semibold  mb-4">🔒 Security First</h2>
+          <p className=" text-green-300 leading-relaxed ">
             GMVault uses advanced encryption techniques to protect your sensitive
             credentials. Your data remains private and accessible only to you.
           </p>
@@ -33,8 +33,8 @@ const About = () => {
         </div>
       </div>
 
-      {/*  Section 2 */}
-      <div className="grid md:grid-cols-2 gap-10 items-center max-w-6xl mx-auto mb-20">
+      {/*  Section 2  Simplicity */}
+      <div className="grid md:grid-cols-2 gap-10 items-center max-w-6xl mx-auto mb-20 ">
         <div className="order-2 md:order-1">
           <img
             src={SimplicityImg}
@@ -43,19 +43,19 @@ const About = () => {
           />
         </div>
         <div className="order-1 md:order-2">
-          <h2 className="text-2xl font-semibold text-gray-900 mb-4">⚡ Simplicity</h2>
-          <p className="text-gray-600 leading-relaxed">
+          <h2 className="text-2xl font-semibold text-gray-900 mb-4 text-white">⚡ Simplicity</h2>
+          <p className="text-green-300 leading-relaxed">
             A clean, intuitive interface makes it easy for anyone to manage
             passwords without hassle. No complex steps, just simple and secure access.
           </p>
         </div>
       </div>
 
-      {/*  Section 3 */}
+      {/*  Section 3 Accessibility */}
       <div className="grid md:grid-cols-2 gap-10 items-center max-w-6xl mx-auto">
         <div>
-          <h2 className="text-2xl font-semibold text-gray-900 mb-4">🌍 Accessibility</h2>
-          <p className="text-gray-600 leading-relaxed">
+          <h2 className="text-2xl font-semibold text-gray-900 mb-4 text-white">🌍 Accessibility</h2>
+          <p className="text-green-300 leading-relaxed">
             Access your credentials from any device, anytime. GMVault ensures you
             are never locked out of your accounts again.
           </p>
@@ -100,7 +100,7 @@ const About = () => {
 
         <div class="flex justify-center text-white bg-[#1da1f2] hover:bg-[#1da1f2]/90 focus:ring-4 focus:outline-none focus:ring-[#1da1f2]/50 font-medium rounded-lg text-sm  text-center inline-flex items-center dark:focus:ring-[#1da1f2]/55 me-2 mb-2">
           <img className='invert w-10 p-1' src="/icons/twitter.svg" alt="github logo" />
-          <button type="button"> <a href="https://x.com/GMYamraj" target="_blank">Sign in with Twitter</a> </button>
+          <button type="button"> <a href="https://x.com/GMYamraj" target="_blank">Connect With Twitter</a> </button>
         </div>
 
 
