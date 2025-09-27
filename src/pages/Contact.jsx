@@ -28,21 +28,21 @@ const Contact = () => {
   };
 
   return (
-      
-   
+
+
     <div className="flex items-center justify-center min-h-screen ">
 
-      
-      
+
+
       <form
         ref={form}
         onSubmit={sendEmail}
         className="bg-white p-6 shadow-lg rounded-lg w-full max-w-md"
-        
-      >
-        
-        <h2 className="text-2xl font-bold mb-4 text-center">Contact Us</h2>
 
+      >
+
+        <h2 className="text-2xl font-bold mb-4 text-center">Contact Us</h2>
+        <p className="font-bold ">ENTER YOUR FULL NAME :</p>
         <input
           type="text"
           name="user_name"
@@ -50,7 +50,7 @@ const Contact = () => {
           className="border w-full p-2 mb-3 rounded"
           required
         />
-
+        <p className="font-bold ">ENTER YOUR EMAIL :</p>
         <input
           type="email"
           name="user_email"
@@ -58,7 +58,7 @@ const Contact = () => {
           className="border w-full p-2 mb-3 rounded"
           required
         />
-
+        <p className="font-bold ">SUBJECT :</p>
         <textarea
           name="message"
           rows="4"

@@ -87,7 +87,8 @@ const Manager = ({ user }) => {
           <span className='text-green-700'>Vault&gt;</span>
         </h1>
         <p className='text-green-900 text-lg text-center'>Your own Password Manager</p>
-        <div className="flex flex-col p-4 text-black gap-10 items-center">
+        <div className="flex flex-col p-4 text-black gap-10 items-center 1">
+          
           <input value={form.site} onChange={handleChange} placeholder='Enter website URL' className="rounded-full border-green-500 w-full p-4 py-2" type="text" name='site' id='site' />
           <div className="flex flex-col md:flex-row w-xl justify-between gap-10 items-center">
             <input value={form.username} onChange={handleChange} placeholder='Enter username' className="rounded-full border-green-900 w-xl p-4 py-2" type="text" name='username' id='username' />
